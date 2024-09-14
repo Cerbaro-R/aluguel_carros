@@ -8,4 +8,8 @@ if ($uri === '/' || $uri === '/index.php') {
     require 'controllers/CarrosController.php';
     $controller = new CarrosController();
     $controller->index();
+}elseif ($uri === '/carros/create') {
+    require 'controllers/CarrosController.php';
+    $controller = new CarrosController();
+    $controller->create();
 }

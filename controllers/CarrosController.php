@@ -4,5 +4,9 @@ class CarrosController {
         
         require 'views/carros/index.php';
     }
+
+    public function create() {
+        require 'views/carros/create.php';
+    }
 }
 ?>
