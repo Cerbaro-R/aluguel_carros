@@ -1,10 +1,13 @@
 <?php
+
+require_once 'models/CarroModel.php';
+
 class CarrosController {
 
     private $model;
 
     public function __construct() {
-        $this->model = new Carro();
+        $this->model = new CarroModel();
     }
     public function index() {
         
@@ -16,6 +19,7 @@ class CarrosController {
     }
 
     public function store() {
+
         $data = [
             'marca' => $_POST['marca'],
             'modelo' => $_POST['modelo'],
