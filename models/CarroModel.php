@@ -13,11 +13,9 @@ require_once 'core/Database.php';
         public function insert($data) {
 
             $query = $this -> db -> prepare
-                ("INSERT INTO carros (marca, modelo, ano, cor, placa, preco_aluguel) 
-                VALUES (:marca, :modelo, :ano, :cor, :placa, :preco_aluguel)");
+                ("INSERT INTO carros (marca, modelo, ano, cor, placa, preco_aluguel, status) 
+                VALUES (:marca, :modelo, :ano, :cor, :placa, :preco_aluguel, :status)");
 
             return $query -> execute($data);
         }
-
-
     }
