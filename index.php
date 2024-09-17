@@ -15,4 +15,14 @@ if ($uri === '/' || $uri === '/index.php') {
     $controller->store();
 }elseif ($uri === '/carros/create') {
     include 'views/carros/create.php';
+}elseif ($uri === '/clientes') {
+    require 'controllers/ClientesController.php';
+    $controller = new ClientesController();
+    $controller->index();
+}elseif ($uri === '/clientes/criar') {
+    require 'controllers/ClientesController.php';
+    $controller = new ClientesController();
+    $controller->criar();
+}elseif ($uri === '/clientes/create') {
+    include 'views/clientes/create.php';
 }
