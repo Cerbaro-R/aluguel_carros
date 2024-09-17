@@ -10,6 +10,11 @@ require_once 'core/Database.php';
             $this->db = Database::getConnection();
         }
 
+        public function getAll() {
+            $this -> db -> query("SELECT * FROM carros");
+            return $query -> fetchAll(PDO::FETCH_OBJ);
+        }
+
         public function insert($data) {
 
             $query = $this -> db -> prepare

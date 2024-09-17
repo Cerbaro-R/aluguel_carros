@@ -27,7 +27,7 @@ class CarrosController {
             'cor' => $_POST['cor'],
             'placa' => $_POST['placa'],
             'preco_aluguel' => $_POST['preco_aluguel'],
-            'status' => 'Em cadastramento',
+            'status' => 'Em cadastramento'
         ]; 
 
         $this->model->insert($data);
