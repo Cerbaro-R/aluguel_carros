@@ -11,6 +11,7 @@ class CarrosController {
     }
     public function index() {
         
+        $carros = $this->model->getAll();
         require 'views/carros/index.php';
     }
 

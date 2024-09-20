@@ -11,7 +11,7 @@ require_once 'core/Database.php';
         }
 
         public function getAll() {
-            $this -> db -> query("SELECT * FROM carros");
+            $query = $this -> db -> query("SELECT * FROM carros");
             return $query -> fetchAll(PDO::FETCH_OBJ);
         }
 
