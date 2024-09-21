@@ -16,6 +16,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/carros">Carros</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/clientes">Clientes</a>
+                </li>
             </ul>
         </div>
     </nav>
