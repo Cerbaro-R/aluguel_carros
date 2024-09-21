@@ -35,5 +35,25 @@ class CarrosController {
 
         header('Location: /carros');
     }
+
+    public function edit() {
+        $carros = $this->model->getById($id);
+        include 'views/carros/edit.php';
+    }
+    public function update() {
+        $data = [
+            'marca' => $_POST['marca'],
+            'modelo' => $_POST['modelo'],
+            'ano' => $_POST['ano'],
+            'cor' => $_POST['cor'],
+            'placa' => $_POST['placa'],
+            'preco_aluguel' => $_POST['preco_aluguel'],
+            'status' => 'Em cadastramento'
+        ];
+
+        $this->model->update($id, $data);
+
+        header('Location: /carros');
+    }
 }
 ?>

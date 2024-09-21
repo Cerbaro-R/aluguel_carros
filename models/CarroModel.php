@@ -15,6 +15,11 @@ require_once 'core/Database.php';
             return $query -> fetchAll(PDO::FETCH_OBJ);
         }
 
+        public function getById($id) {
+            $query = $this -> db -> prepare("SELECT * FROM carros WHERE id = :id");
+            $query -> execute(['id' => $id]);
+        }
+
         public function insert($data) {
 
             $query = $this -> db -> prepare
