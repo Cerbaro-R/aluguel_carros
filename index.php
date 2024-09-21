@@ -15,7 +15,16 @@ if ($uri === '/' || $uri === '/index.php') {
     $controller->store();
 }elseif ($uri === '/carros/create') {
     include 'views/carros/create.php';
-}elseif ($uri === '/clientes') {
+}elseif (preg_match('/^\/carros\/edit\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/CarrosController.php';
+    $controller = new CarrosController();
+    $controller->edit($matches[1]);   
+}elseif (preg_match('/^\/carros\/update\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/CarrosController.php';
+    $controller = new CarrosController();
+    $controller->update($matches[1]);   
+}
+elseif ($uri === '/clientes') {
     require 'controllers/ClientesController.php';
     $controller = new ClientesController();
     $controller->index();

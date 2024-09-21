@@ -38,21 +38,20 @@
             </tr>
         </thread>
         <tbody>
-            <?php foreach($carros as $carro): ?>
-                <tr>
-                    <td><?= htmlspecialchars($carro->marca) ?></td>
-                    <td><?= htmlspecialchars($carro->modelo) ?></td>
-                    <td><?= htmlspecialchars($carro->ano) ?></td>
-                    <td><?= htmlspecialchars($carro->cor) ?></td>
-                    <td><?= htmlspecialchars($carro->placa) ?></td>
-                    <td><?= htmlspecialchars($carro->preco_aluguel) ?></td>
-                    <td><?= htmlspecialchars($carro->status) ?></td>
-                    <td>
-                        <a href="/carros/edit/<?= $carro['id'] ?>">Editar</a>
-                        <a href="/carros/delete/<?= $carro['id'] ?>"onclick="return confirm('Tem certeza que deseja excluír ?')">Excluir</a>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
+        <?php foreach($carros as $carro): ?>
+    <tr>
+        <td><?= htmlspecialchars($carro->marca) ?></td>
+        <td><?= htmlspecialchars($carro->modelo) ?></td>
+        <td><?= htmlspecialchars($carro->ano) ?></td>
+        <td><?= htmlspecialchars($carro->cor) ?></td>
+        <td><?= htmlspecialchars($carro->placa) ?></td>
+        <td><?= htmlspecialchars($carro->preco_aluguel) ?></td>
+        <td><?= htmlspecialchars($carro->status) ?></td>
+        <td>
+            <a href="/carros/edit/<?= $carro->id ?>" class="btn btn-warning btn-sm">Editar</a>
+        </td>
+    </tr>
+<?php endforeach; ?>
         </tbody>
     </table>
 </body>
