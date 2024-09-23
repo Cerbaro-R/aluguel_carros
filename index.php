@@ -27,7 +27,7 @@ if ($uri === '/' || $uri === '/index.php') {
 elseif ($uri === '/clientes') {
     require 'controllers/ClientesController.php';
     $controller = new ClientesController();
-    $controller->index();
+    $controller->exibir();
 }elseif ($uri === '/clientes/criar') {
     require 'controllers/ClientesController.php';
     $controller = new ClientesController();

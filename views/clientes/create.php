@@ -9,39 +9,39 @@
     
 <h1>Cadastrar Novo Cliente</h1> 
 
-<form action="/clientes/store" method="POST"> 
+<form action="/clientes/criar" method="POST"> 
 
     <label>Nome:</label> 
 
-    <input type="text" name="nome" required> 
+    <input type="text" name="nome" required><br><br>
 
  
 
     <label>CPF:</label> 
 
-    <input type="text" name="cpf" required> 
+    <input type="text" name="cpf" required><br><br>
 
  
 
     <label>Telefone:</label> 
 
-    <input type="text" name="telefone" required> 
+    <input type="text" name="telefone" required><br><br>
 
  
 
     <label>E-mail:</label> 
 
-    <input type="email" name="email" required> 
+    <input type="email" name="email" required><br><br>
 
  
 
     <label>Endereço:</label> 
 
-    <textarea name="endereco" required></textarea> 
+    <textarea name="endereco" required></textarea><br><br>
 
  
 
-    <button type="submit">Cadastrar Cliente</button> 
+    <button type="submit">Cadastrar Cliente</button>
 
 </form> 
     
