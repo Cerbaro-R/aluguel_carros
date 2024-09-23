@@ -30,4 +30,15 @@ require_once 'core/Database.php';
 
             return $query -> execute($data);
         }
+
+        public function update($id, $data)
+        {
+
+            $query = $this->db->prepare("UPDATE carros SET marca = :marca, modelo = :modelo, ano = :ano, cor = :cor, placa = :placa, preco_aluguel = :preco_aluguel, status = :status WHERE id = :id");
+    
+            $data['id'] = $id;
+    
+            return $query->execute($data);
+        }
+
     }

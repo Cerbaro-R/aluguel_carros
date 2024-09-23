@@ -25,37 +25,38 @@
 
     <div class="container">
         <h1>Editar Carro</h1>
-        <form action="/carros/update<?= $carro['id'] ?>" method="post">
-            <div class ="form-group">
-                <label for="marca">Marca</label>
-                <input type='text' class="form-control" id="marca" value="<?= htmlspecialchars($carro['marca']) ?>" required>
-            </div>
-            <div class = "form-group">
-                <label for="modelo">Modelo</label>
-                <input type='text' class="form-control" id="modelo" value="<?= htmlspecialchars($carro['modelo']) ?>" required>
-            </div>
-            <div class = "form-group">
-                <label for="ano">Ano</label>
-                <input type='text' class="form-control" id="ano" value="<?= htmlspecialchars($carro['ano']) ?>" required>
-            </div>
-            <div class = "form-group">
-                <label for="cor">Cor</label>    
-                <input type='text' class="form-control" id="cor" value="<?= htmlspecialchars($carro['cor']) ?>" required>
-            </div>
-            <div class = "form-group">
-                <label for="placa">Placa</label>
-                <input type='text' class="form-control" id="placa" value="<?= htmlspecialchars($carro['placa']) ?>" required>
-            </div>
-            <div class = "form-group">
-                <label for="preco_aluguel">Preço do Aluguel</label>
-                <input type='text' class="form-control" id="preco_aluguel" value="<?= htmlspecialchars($carro['preco_aluguel']) ?>" required>
-            </div>
-            <div class = "form-group">
-                <label for="status">Status</label>
-                <input type='text' class="form-control" id="status" value="<?= htmlspecialchars($carro['status']) ?>" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+        <form action="/carros/update/<?= $carro['id'] ?>" method="post">
+    <div class="form-group">
+        <label for="marca">Marca</label>
+        <input type="text" class="form-control" id="marca" name="marca" value="<?= htmlspecialchars($carro['marca']) ?>" required>
     </div>
+    <div class="form-group">
+        <label for="modelo">Modelo</label>
+        <input type="text" class="form-control" id="modelo" name="modelo" value="<?= htmlspecialchars($carro['modelo']) ?>" required>
+    </div>
+    <div class="form-group">
+        <label for="ano">Ano</label>
+        <input type="text" class="form-control" id="ano" name="ano" value="<?= htmlspecialchars($carro['ano']) ?>" required>
+    </div>
+    <div class="form-group">
+        <label for="cor">Cor</label>
+        <input type="text" class="form-control" id="cor" name="cor" value="<?= htmlspecialchars($carro['cor']) ?>" required>
+    </div>
+    <div class="form-group">
+        <label for="placa">Placa</label>
+        <input type="text" class="form-control" id="placa" name="placa" value="<?= htmlspecialchars($carro['placa']) ?>" required>
+    </div>
+    <div class="form-group">
+        <label for="preco_aluguel">Preço do Aluguel</label>
+        <input type="text" class="form-control" id="preco_aluguel" name="preco_aluguel" value="<?= htmlspecialchars($carro['preco_aluguel']) ?>" required>
+    </div>
+    <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" class="form-control" id="status" name="status" value="<?= htmlspecialchars($carro['status']) ?>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+</form>
+
     
 </body>
 </html>
