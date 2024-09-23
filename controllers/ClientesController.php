@@ -18,18 +18,25 @@ class ClientesController {
         require 'views/clientes/create.php';
     }
 
+    // criar 
     public function criar() {
         $data = [
             'nome' => $_POST['nome'],
             'cpf' => $_POST['cpf'],
             'telefone' => $_POST['telefone'],
-            'enderco' => $_POST['enderco'],
+            'endereco' => $_POST['endereco'],
             'email' => $_POST['email'],
         ];
         
         $this->model->insert($data);
 
         header('Location: /clientes');
+    }
+
+    // exibir os clientes
+    public function exibir() {
+        $clientes = $this->model->getAllClientes();
+        include 'views/clientes/index.php';
     }
    
 
