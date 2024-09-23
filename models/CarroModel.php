@@ -17,7 +17,9 @@ require_once 'core/Database.php';
 
         public function getById($id) {
             $query = $this -> db -> prepare("SELECT * FROM carros WHERE id = :id");
-            $query -> execute(['id' => $id]);
+            $query -> bindParam(':id', $id);
+            $query -> execute();
+            return $query -> fetch(PDO::FETCH_ASSOC);
         }
 
         public function insert($data) {

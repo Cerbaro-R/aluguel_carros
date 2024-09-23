@@ -36,8 +36,10 @@ class CarrosController {
         header('Location: /carros');
     }
 
-    public function edit() {
-        $carros = $this->model->getById($id);
+    public function edit($id) {
+        
+        
+        $carro = $this->model->getById($id);        
         include 'views/carros/edit.php';
     }
     public function update() {
