@@ -35,8 +35,18 @@ class ClientesController {
 
     // exibir os clientes
     public function exibir() {
+
         $clientes = $this->model->getAllClientes();
+
         include 'views/clientes/index.php';
+    }
+
+    // função para excluir
+    public function excluirCliente($id) {
+
+        $this->model->excluir($id);
+        
+        header('Location: /clientes');
     }
    
 

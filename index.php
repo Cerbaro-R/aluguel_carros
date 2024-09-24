@@ -34,4 +34,8 @@ elseif ($uri === '/clientes') {
     $controller->criar();
 }elseif ($uri === '/clientes/create') {
     include 'views/clientes/create.php';
+}elseif (preg_match('/^\/clientes\/delete\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/ClientesController.php';
+    $controller = new ClientesController();
+    $controller->excluirCliente($matches[1]);
 }
