@@ -24,4 +24,11 @@ class ClienteModel {
         $cliente->execute();
         return $cliente->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function excluir($id) {
+
+        $query = $this->db->prepare("DELETE FROM clientes WHERE id = :id");
+
+        return $query->execute(['id' => $id]);
+    }
 }
