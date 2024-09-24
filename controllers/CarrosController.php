@@ -42,7 +42,7 @@ class CarrosController {
         $carro = $this->model->getById($id);        
         include 'views/carros/edit.php';
     }
-    public function update() {
+    public function update($id) {
         $data = [
             'marca' => $_POST['marca'],
             'modelo' => $_POST['modelo'],
@@ -50,12 +50,13 @@ class CarrosController {
             'cor' => $_POST['cor'],
             'placa' => $_POST['placa'],
             'preco_aluguel' => $_POST['preco_aluguel'],
-            'status' => 'Em cadastramento'
+            'status' => $_POST['status']
         ];
-
+    
         $this->model->update($id, $data);
-
+    
         header('Location: /carros');
     }
+    
 }
 ?>
