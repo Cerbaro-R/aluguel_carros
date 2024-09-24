@@ -100,4 +100,4 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-                <a href="/carros/inactivate/<?= $carro['id'] ?>" class="btn btn-danger ms-2">Inativar
+                <a href="/carros/delete/<?= $carro['id'] ?>" class="btn btn-danger ms-2">Inativar

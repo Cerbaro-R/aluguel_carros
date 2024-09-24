@@ -57,6 +57,12 @@ class CarrosController {
     
         header('Location: /carros');
     }
-    
+    public function inativarCarro($id) {
+
+        $this->model->inativar($id);
+        
+        header('Location: /carros');
+        
+    }
 }
 ?>

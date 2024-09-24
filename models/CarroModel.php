@@ -11,7 +11,7 @@ require_once 'core/Database.php';
         }
 
         public function getAll() {
-            $query = $this -> db -> query("SELECT * FROM carros");
+            $query = $this -> db -> query("SELECT * FROM carros WHERE ativo = '1'");
             return $query -> fetchAll(PDO::FETCH_OBJ);
         }
 
@@ -41,4 +41,11 @@ require_once 'core/Database.php';
             return $query->execute($data);
         }
 
-    }
+        public function inativar($id) {
+
+            $query = $this->db->prepare("UPDATE carros SET ativo = '0' WHERE id = :id");
+
+            return $query->execute(['id' => $id]);
+        }
+
+   }

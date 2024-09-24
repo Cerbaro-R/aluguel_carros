@@ -23,6 +23,10 @@ if ($uri === '/' || $uri === '/index.php') {
     require 'controllers/CarrosController.php';
     $controller = new CarrosController();
     $controller->update($matches[1]);   
+}elseif (preg_match('/^\/carros\/delete\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/CarrosController.php';
+    $controller = new CarrosController();
+    $controller->inativarCarro($matches[1]);
 }
 elseif ($uri === '/clientes') {
     require 'controllers/ClientesController.php';
