@@ -32,13 +32,13 @@ class ClienteModel {
         return $query->execute(['id' => $id]);
     }
 
-    public function editar($id, $data) {
+    public function update($id, $data) {
         
         $query = $this -> db -> prepare
             ("UPDATE clientes SET nome = :nome, cpf = :cpf, telefone = :telefone, endereco = :endereco, email = :email WHERE id = :id");
     
-    $data['id'] = $id;
-            return $query->execute();
+        $data['id'] = $id;
+        return $query->execute($data);
     }
 
     public function getByIdClientes($id) {
