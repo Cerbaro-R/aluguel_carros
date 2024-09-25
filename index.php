@@ -42,4 +42,12 @@ elseif ($uri === '/clientes') {
     require 'controllers/ClientesController.php';
     $controller = new ClientesController();
     $controller->excluirCliente($matches[1]);
+}elseif (preg_match('/^\/clientes\/edit\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/ClientesController.php';
+    $controller = new ClientesController();
+    $controller->atualizar($matches[1]);   
+}elseif (preg_match('/^\/clientes\/editarCliente\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/ClientesController.php';
+    $controller = new CarrosController();
+    $controller->editarCliente($matches[1]);   
 }
