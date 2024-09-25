@@ -41,6 +41,8 @@
 
             <th>E-mail</th> 
 
+            <th>Endereço</th>
+
             <th>Ações</th> 
 
         </tr> 
@@ -60,6 +62,8 @@
             <td><?= htmlspecialchars($cliente['telefone']) ?></td> 
 
             <td><?= htmlspecialchars($cliente['email']) ?></td> 
+
+            <td><?= htmlspecialchars($cliente['endereco']) ?></td>
 
             <td> 
 

@@ -90,7 +90,7 @@
     <div class="container">
         <h1 class="text-center">Editar Cliente</h1>
 
-        <form action="/clientes/editar/<?php echo $cliente['id']; ?>" method="POST">
+        <form action="/clientes/update/<?php echo $cliente['id']; ?>" method="POST">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome:</label>
                 <input type="text" id="nome" name="nome" class="form-control" value="<?php echo ($cliente['nome']); ?>" required>
@@ -113,7 +113,7 @@
 
             <div class="mb-3">
                 <label for="endereco" class="form-label">Endereço:</label>
-                <textarea id="endereco" name="endereco" class="form-control" rows="3" value="<?php echo ($cliente['endereco']); ?>" required></textarea>
+                <textarea id="endereco" name="endereco" class="form-control" rows="3" required><?php echo ($cliente['endereco']); ?></textarea>
             </div>
 
             <div class="text-center">

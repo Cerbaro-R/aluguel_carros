@@ -57,7 +57,7 @@ class ClientesController {
     }
 
     // função para atualizar
-    public function editarCliente($id) {
+    public function update($id) {
         $data = [
             'nome' => $_POST['nome'],
             'cpf' => $_POST['cpf'],
@@ -66,7 +66,7 @@ class ClientesController {
             'email' => $_POST['email'],
         ];
         
-        $this->model->editarCliente($id, $data);
+        $this->model->update($id, $data);
 
         header('Location: /clientes');
     }
