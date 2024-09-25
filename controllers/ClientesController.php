@@ -48,6 +48,28 @@ class ClientesController {
         
         header('Location: /clientes');
     }
+
+    public function atualizar($id) {
+        
+        
+        $cliente = $this->model->getByIdClientes($id);        
+        include 'views/clientes/edit.php';
+    }
+
+    // função para atualizar
+    public function editarCliente($id) {
+        $data = [
+            'nome' => $_POST['nome'],
+            'cpf' => $_POST['cpf'],
+            'telefone' => $_POST['telefone'],
+            'endereco' => $_POST['endereco'],
+            'email' => $_POST['email'],
+        ];
+        
+        $this->model->editarCliente($id, $data);
+
+        header('Location: /clientes');
+    }
    
 
 }

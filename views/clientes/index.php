@@ -63,7 +63,7 @@
 
             <td> 
 
-                <a href="/clientes/edit/<?= $cliente['id'] ?>">Editar</a> | 
+                <a href="/clientes/edit/<?= $cliente['id'] ?>" class="btn btn-warning btn-sm">Editar</a> | 
 
                 <a href="/clientes/delete/<?= $cliente['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a> 
 

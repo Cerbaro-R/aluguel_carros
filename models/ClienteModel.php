@@ -31,4 +31,20 @@ class ClienteModel {
 
         return $query->execute(['id' => $id]);
     }
+
+    public function editar($id, $data) {
+        
+        $query = $this -> db -> prepare
+            ("UPDATE clientes SET nome = :nome, cpf = :cpf, telefone = :telefone, endereco = :endereco, email = :email WHERE id = :id");
+    
+    $data['id'] = $id;
+            return $query->execute();
+    }
+
+    public function getByIdClientes($id) {
+        $query = $this -> db -> prepare("SELECT * FROM clientes WHERE id = :id");
+        $query -> bindParam(':id', $id, PDO::PARAM_INT);
+        $query -> execute();
+        return $query -> fetch(PDO::FETCH_ASSOC);
+    }
 }
