@@ -51,3 +51,18 @@ elseif ($uri === '/clientes') {
     $controller = new ClientesController();
     $controller->update($matches[1]);   
 }
+elseif ($uri === '/aluguel') {
+    require 'controllers/AluguelController.php';
+    $controller = new AluguelController();
+    $controller->index();
+}elseif ($uri === '/aluguel/create') {
+    require 'controllers/AluguelController.php';
+    $controller = new AluguelController();
+    $controller->create();
+}
+
+elseif ($uri === '/aluguel/store') {
+    require 'controllers/AluguelController.php';
+    $controller = new AluguelController();
+    $controller->store();
+}
