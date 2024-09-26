@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+<a href="/aluguel/create"><input type="button" value="Alugar Veiculo"></a>
 <h1>Histórico de Aluguéis</h1>
 <table>
     <thead>

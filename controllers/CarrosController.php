@@ -16,7 +16,9 @@ class CarrosController {
     }
 
     public function create() {
-        require 'views/carros/create.php';
+        
+        include 'views/carros/create.php';
+
     }
 
     public function store() {
