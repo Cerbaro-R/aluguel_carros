@@ -6,32 +6,59 @@
     <title>Lista de Carros</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     <style>
-        body {
-            background-color: #A8E6CF; /* Cor de fundo verde claro pastel */
+        .navbar {
+            background-color: #E0F7EF;
         }
-        h1 {
-            color: #004080; /* Título azul escuro */
-        }
+
         .btn-success {
-            background-color: #28a745; /* Verde para o botão Adicionar Carro */
-            border: none; /* Remove a borda do botão */
-            padding: 10px 20px; /* Ajuste do padding */
+            background-color: #A8E6CF;
+            border: none;
         }
+
         .btn-success:hover {
-            background-color: #218838; /* Verde escuro no hover */
+            background-color: #94D4B6;
         }
-        .table {
-            border-radius: 10px; /* Arredonda as bordas da tabela */
-            overflow: hidden; /* Para aplicar o arredondamento */
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #F8F8F8;
         }
-        .table th, .table td {
-            vertical-align: middle; /* Centraliza verticalmente o conteúdo da tabela */
+
+        .table-hover tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .status-active {
+            background-color: #A8E6CF;
+            color: white;
+            padding: 0.25em 0.5em;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .status-inactive {
+            background-color: #FF8A80;
+            color: white;
+            padding: 0.25em 0.5em;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .navbar-second {
+            margin-top: 10px;
+            background-color: #D4EDE5; /* Fundo mais escuro que a tabela */
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navbar-second .btn {
+            margin-right: auto; /* Alinha à esquerda */
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Primeira Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="/">Aluguel de Carros</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -45,14 +72,16 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <h1 class="mb-4">Lista de Carros</h1>
-        <div class="mb-3">
+    <!-- Segunda Navbar -->
+    <nav class="navbar navbar-second d-flex">
+        <div class="container-fluid">
             <a href="/carros/create" class="btn btn-success">Adicionar Carro</a>
         </div>
+    </nav>
 
+    <div class="container mt-4">
         <table class="table table-striped table-hover table-bordered">
-            <thead class="table-dark">
+            <thead>
                 <tr>
                     <th>Marca</th>
                     <th>Modelo</th>

@@ -50,4 +50,8 @@ elseif ($uri === '/clientes') {
     require 'controllers/ClientesController.php';
     $controller = new ClientesController();
     $controller->update($matches[1]);   
+}elseif ($uri === '/aluguel') {
+    require 'controllers/AluguelController.php';
+    $controller = new AluguelController();
+    $controller->index();
 }
