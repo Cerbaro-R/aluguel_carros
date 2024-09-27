@@ -24,20 +24,56 @@
 
     <div class="container mt-4 form-container">
      
-        <h1>Alugar Carro</h1>
+    <h1>Alugar Carro</h1>
         <form action="/aluguel/store" method="post" class="mt-4">
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="carro" class="form-label">Carro</label>
-                    <select id="carro_id" name="carro_id">
-                    <?php foreach ($carros as $carro): ?>
-                        <option value="<?= $carro->id ?>"><?= $carro->marca ?> - <?= $carro->modelo ?></option>
-                    <?php endforeach; ?>
+                    <select id="carro_id" name="carro_id" class="form-control">
+                        <?php foreach ($carros as $carro): ?>
+                        <option value="<?= $carro->id ?>" data-preco="<?= $carro->preco_aluguel ?>">
+                            <?= $carro->marca ?> - <?= $carro->modelo ?>
+                        </option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
-              
-            <button type="submit" class="btn btn-primary">Cadastrar Carro</button>
+            </div>
+                <div class="col-md-6">
+                    <label for="cliente" class="form-label">Cliente</label>
+                    <select id="cliente_id" name="cliente_id" class="form-control">
+                        <?php foreach ($clientes as $cliente): ?>
+                        <option value="<?= $cliente['id'] ?>"><?= $cliente['nome'] ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                    <label for="data_inicio" class="form-label">Data de Início</label>
+                    <input type="date" id="data_inicio" name="data_inicio" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="data_fim" class="form-label">Data de Término</label>
+                    <input type="date" id="data_fim" name="data_fim" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="preco_total" class="form-label">Valor Total</label>
+                    <input type="text" id="preco_total" name="preco_total" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Alugar</button>
+                </div>
+            </div>
         </form>
+
+        <script src="../../public/js.js"></script>
+
     </div>
 </body>
 </html>
