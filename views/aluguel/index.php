@@ -11,7 +11,8 @@
 <table>
     <thead>
         <tr>
-            <th>Carro</th>
+            <th>Marca</th>
+            <th>Modelo</th>
             <th>Cliente</th>
             <th>Data de Início</th>
             <th>Data de Fim</th>
@@ -22,12 +23,13 @@
     <tbody>
         <?php foreach($alugueis as $aluguel): ?>
         <tr>
-            <td><?= htmlspecialchars($aluguel['carro']) ?></td>
-            <td><?= htmlspecialchars($aluguel['cliente']) ?></td>
-            <td><?= htmlspecialchars($aluguel['data_inicio']) ?></td>
-            <td><?= htmlspecialchars($aluguel['data_fim']) ?></td>
-            <td><?= htmlspecialchars($aluguel['preco_total']) ?></td>
-            <td><?= htmlspecialchars($aluguel['status']) == 'ativo' ? 'Ativo' : 'Finalizado' ?></td>
+            <td><?= htmlspecialchars($aluguel->marca) ?></td>
+            <td><?= htmlspecialchars($aluguel->modelo) ?></td>
+            <td><?= htmlspecialchars($aluguel->nome) ?></td>
+            <td><?= htmlspecialchars($aluguel->data_inicio) ?></td>
+            <td><?= htmlspecialchars($aluguel->data_fim) ?></td>
+            <td><?= htmlspecialchars($aluguel->preco_total) ?></td>
+            <td><?= htmlspecialchars($aluguel->status) ?></td>
         </tr>
         <?php endforeach; ?>
     </tbody>

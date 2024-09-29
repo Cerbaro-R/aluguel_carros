@@ -10,6 +10,18 @@ class AluguelModel {
     }
 
     public function getAll() {
+        $query = $this->db->prepare(
+            "SELECT alugueis.*, carros.marca, carros.modelo, clientes.nome
+            FROM alugueis
+            INNER JOIN carros ON alugueis.carro_id = carros.id
+            INNER JOIN clientes ON alugueis.cliente_id = clientes.id
+            ORDER BY alugueis.data_inicio DESC"
+        );
+    
+        if($query->execute()) {
+            return $query->fetchAll(PDO::FETCH_OBJ);
+        }
+
     }
 
     public function insert($data) {
