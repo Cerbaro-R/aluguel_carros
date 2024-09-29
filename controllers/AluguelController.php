@@ -32,7 +32,7 @@ class AluguelController {
             'cliente_id' => $_POST['cliente_id'],
             'data_inicio' => $_POST['data_inicio'],
             'data_fim' => $_POST['data_fim'],
-            'preco_total' => $_POST['preco_aluguel'],
+            'preco_total' => $_POST['preco_total'],
             'status' => 'Em aberto'
         ];
 

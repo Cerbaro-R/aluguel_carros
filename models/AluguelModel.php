@@ -12,8 +12,7 @@ class AluguelModel {
     public function getAll() {
     }
 
-    public function insert($data) {
-
+    public function insert($data) {     
        
            $query = $this->db->prepare
             ("INSERT INTO alugueis (carro_id, cliente_id, data_inicio, data_fim, preco_total, status)
