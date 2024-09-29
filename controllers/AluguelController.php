@@ -18,7 +18,9 @@ class AluguelController {
     }
 
     public function index() {
+        $alugueis = $this->model->getAll();
         require 'views/aluguel/index.php';
+        
     }
     public function create() {
         $carros = $this->carroModel->getAll();
@@ -32,12 +34,9 @@ class AluguelController {
             'cliente_id' => $_POST['cliente_id'],
             'data_inicio' => $_POST['data_inicio'],
             'data_fim' => $_POST['data_fim'],
-            'preco_total' => $_POST['preco_aluguel'],
+            'preco_total' => $_POST['preco_total'],
             'status' => 'Em aberto'
         ];
-
-        //não sei por que diabos mas a id do array que puxa do POST tem que ser como preco_aluguel, se for por o preco total
-        //que seria o certo não funciona, vou deixar assim mesmo já que ta funcionando
 
         $this->model->insert($data);
 
