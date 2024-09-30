@@ -9,6 +9,12 @@ class CarrosController {
     public function __construct() {
         $this->model = new CarroModel();
     }
+
+    public function table(){
+        $carros = $this ->model->getAll();
+        include 'views/home.php';
+    }
+
     public function index() {
         
         $carros = $this->model->getAll();
