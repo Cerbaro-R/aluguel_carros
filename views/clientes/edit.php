@@ -90,30 +90,30 @@
     <div class="container">
         <h1 class="text-center">Editar Cliente</h1>
 
-        <form action="/clientes/update/<?php echo $cliente['id']; ?>" method="POST">
+        <form action="/clientes/update/<?php echo $cliente->id; ?>" method="POST">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome:</label>
-                <input type="text" id="nome" name="nome" class="form-control" value="<?php echo ($cliente['nome']); ?>" required>
+                <input type="text" id="nome" name="nome" class="form-control" value="<?php echo ($cliente->nome); ?>" required>
             </div>
 
             <div class="mb-3">
                 <label for="cpf" class="form-label">CPF:</label>
-                <input type="text" id="cpf" name="cpf" class="form-control" value="<?php echo ($cliente['cpf']); ?>" required>
+                <input type="text" id="cpf" name="cpf" class="form-control" value="<?php echo ($cliente->cpf); ?>" required>
             </div>
 
             <div class="mb-3">
                 <label for="telefone" class="form-label">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" class="form-control" value="<?php echo ($cliente['telefone']); ?>" required>
+                <input type="text" id="telefone" name="telefone" class="form-control" value="<?php echo ($cliente->telefone); ?>" required>
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail:</label>
-                <input type="email" id="email" name="email" class="form-control" value="<?php echo ($cliente['email']); ?>" required>
+                <input type="email" id="email" name="email" class="form-control" value="<?php echo ($cliente->email); ?>" required>
             </div>
 
             <div class="mb-3">
                 <label for="endereco" class="form-label">Endereço:</label>
-                <textarea id="endereco" name="endereco" class="form-control" rows="3" required><?php echo ($cliente['endereco']); ?></textarea>
+                <textarea id="endereco" name="endereco" class="form-control" rows="3" required><?php echo ($cliente->endereco); ?></textarea>
             </div>
 
             <div class="text-center">

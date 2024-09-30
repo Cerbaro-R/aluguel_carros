@@ -19,10 +19,10 @@ class ClienteModel {
         return $query -> execute($data);
     }
 
-    public function getAllClientes() {
+    public function getAll() {
         $cliente = $this->db->prepare("SELECT * FROM clientes");
         $cliente->execute();
-        return $cliente->fetchAll(PDO::FETCH_ASSOC);
+        return $cliente->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function excluir($id) {
@@ -41,10 +41,10 @@ class ClienteModel {
         return $query->execute($data);
     }
 
-    public function getByIdClientes($id) {
+    public function getById($id) {
         $query = $this -> db -> prepare("SELECT * FROM clientes WHERE id = :id");
         $query -> bindParam(':id', $id, PDO::PARAM_INT);
         $query -> execute();
-        return $query -> fetch(PDO::FETCH_ASSOC);
+        return $query -> fetch(PDO::FETCH_OBJ);
     }
 }
