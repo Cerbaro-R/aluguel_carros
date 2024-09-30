@@ -68,7 +68,11 @@ elseif ($uri === '/aluguel') {
 }elseif (preg_match('/^\/aluguel\/edit\/(\d+)$/', $uri, $matches)) {
     require 'controllers/AluguelController.php';
     $controller = new AluguelController();
-    $controller->edit($matches[1]);   
+    $controller->edit($matches[1]);
+}elseif (preg_match('/^\/aluguel\/update\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/AluguelController.php';
+    $controller = new AluguelController();
+    $controller->update($matches[1]);   
 }elseif (preg_match('/^\/aluguel\/delete\/(\d+)$/', $uri, $matches)) {
     require 'controllers/AluguelController.php';
     $controller = new AluguelController();
