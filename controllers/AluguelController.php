@@ -55,4 +55,19 @@ class AluguelController {
             header('Location: /aluguel');
         }
     }
+
+    public function update($id){
+        $data = [
+            'carro_id' => $_POST['carro_id'],
+            'cliente_id' => $_POST['cliente_id'],
+            'data_inicio' => $_POST['data_inicio'],
+            'data_fim' => $_POST['data_fim'],
+            'preco_total' => $_POST['preco_total'],
+            'status' => $_POST['status']
+        ];
+
+        $this->model->update($id, $data);
+
+        header('Location: /aluguel');
+    }
 }

@@ -47,4 +47,11 @@ class AluguelModel {
             return $query->execute($data);
     }
     
+    public function update($id, $data){
+
+        $query = $this->db->prepare("UPDATE alugueis SET carro_id = :carro_id, cliente_id = :cliente_id, data_inicio = :data_inicio, data_fim = :data_fim, preco_total = :preco_total, status = :status WHERE id = :id");
+
+        $data['id'] = $id;
+        return $query->execute($data);
+    }
 }

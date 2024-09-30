@@ -71,6 +71,13 @@
                 </div>
             </div>
 
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="status" class="form-label">Status</label>
+                    <input type="text" id="status" name="status" class="form-control" value="<?= $aluguel->status ?>" readonly>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Atualizar Aluguel</button>
