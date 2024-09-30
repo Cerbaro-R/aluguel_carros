@@ -42,6 +42,7 @@ class CarrosController {
         $carro = $this->model->getById($id);        
         include 'views/carros/edit.php';
     }
+
     public function update($id) {
         $data = [
             'marca' => $_POST['marca'],
@@ -57,7 +58,7 @@ class CarrosController {
     
         header('Location: /carros');
     }
-    public function inativarCarro($id) {
+    public function inativar($id) {
 
         $this->model->inativar($id);
         

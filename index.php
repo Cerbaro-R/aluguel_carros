@@ -26,7 +26,7 @@ if ($uri === '/' || $uri === '/index.php') {
 }elseif (preg_match('/^\/carros\/delete\/(\d+)$/', $uri, $matches)) {
     require 'controllers/CarrosController.php';
     $controller = new CarrosController();
-    $controller->inativarCarro($matches[1]);
+    $controller->inativar($matches[1]);
 }
 elseif ($uri === '/clientes') {
     require 'controllers/ClientesController.php';
@@ -67,4 +67,8 @@ elseif ($uri === '/aluguel') {
     require 'controllers/AluguelController.php';
     $controller = new AluguelController();
     $controller->edit($matches[1]);   
+}elseif (preg_match('/^\/aluguel\/delete\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/AluguelController.php';
+    $controller = new AluguelController();
+    $controller->inativar($matches[1]);
 }

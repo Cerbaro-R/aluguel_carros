@@ -15,6 +15,7 @@ class AluguelModel {
             FROM alugueis
             INNER JOIN carros ON alugueis.carro_id = carros.id
             INNER JOIN clientes ON alugueis.cliente_id = clientes.id
+            WHERE alugueis.ativo = 1
             ORDER BY alugueis.data_inicio DESC"
         );
     
@@ -55,5 +56,9 @@ class AluguelModel {
         return $query->execute($data);
     }
 
-    
+    public function inativar($id){
+        $query = $this->db->prepare("UPDATE alugueis SET ativo = '0' WHERE id = :id");
+
+        return $query->execute(['id' => $id]);
+    }    
 }

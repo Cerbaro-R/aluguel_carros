@@ -74,8 +74,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Atualizar Aluguel</button>
+                    <a href="/aluguel/delete/<?= $aluguel->id ?>" class="btn btn-danger ms-2">Inativar</a>
                 </div>
             </div>
+            
         </form>
 
         <script src="../../public/js.js"></script>
