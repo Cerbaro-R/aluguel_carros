@@ -9,6 +9,12 @@ class CarrosController {
     public function __construct() {
         $this->model = new CarroModel();
     }
+
+    public function table(){
+        $carros = $this ->model->getAll();
+        include 'views/home.php';
+    }
+
     public function index() {
         
         $carros = $this->model->getAll();
@@ -42,6 +48,7 @@ class CarrosController {
         $carro = $this->model->getById($id);        
         include 'views/carros/edit.php';
     }
+
     public function update($id) {
         $data = [
             'marca' => $_POST['marca'],
@@ -57,7 +64,7 @@ class CarrosController {
     
         header('Location: /carros');
     }
-    public function inativarCarro($id) {
+    public function inativar($id) {
 
         $this->model->inativar($id);
         

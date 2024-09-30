@@ -4,7 +4,9 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 
 if ($uri === '/' || $uri === '/index.php') {
-    include 'views/home.php';
+    require 'controllers/CarrosController.php';
+    $controller = new CarrosController();
+    $controller->table();
 }elseif ($uri === '/carros') {
     require 'controllers/CarrosController.php';
     $controller = new CarrosController();
@@ -26,7 +28,7 @@ if ($uri === '/' || $uri === '/index.php') {
 }elseif (preg_match('/^\/carros\/delete\/(\d+)$/', $uri, $matches)) {
     require 'controllers/CarrosController.php';
     $controller = new CarrosController();
-    $controller->inativarCarro($matches[1]);
+    $controller->inativar($matches[1]);
 }
 elseif ($uri === '/clientes') {
     require 'controllers/ClientesController.php';
@@ -67,4 +69,8 @@ elseif ($uri === '/aluguel') {
     require 'controllers/AluguelController.php';
     $controller = new AluguelController();
     $controller->edit($matches[1]);   
+}elseif (preg_match('/^\/aluguel\/delete\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/AluguelController.php';
+    $controller = new AluguelController();
+    $controller->inativar($matches[1]);
 }

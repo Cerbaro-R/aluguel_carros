@@ -55,4 +55,9 @@ class AluguelController {
             header('Location: /aluguel');
         }
     }
+    public function inativar($id){
+        $this -> model -> inativar($id);
+
+        header ('Location: /aluguel');
+    }
 }

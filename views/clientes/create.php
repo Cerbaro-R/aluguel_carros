@@ -3,89 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Cadastro Clientes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <style>
-        /* Estilo personalizado */
-        body {
-            background-color: #f8f9fa; /* Cor de fundo suave */
-        }
-
-        h1 {
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            color: #007bff; /* Cor azul Bootstrap */
-            margin-bottom: 30px;
-        }
-
-        form {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
-        }
-
-        label {
-            font-weight: bold;
-            color: #343a40; /* Cor do texto das labels */
-        }
-
-        input, textarea {
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-            padding: 10px;
-        }
-
-        input:focus, textarea:focus {
-            border-color: #80bdff;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Efeito de foco azul */
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #004085;
-        }
-
-        .container {
-            max-width: 600px; /* Largura máxima para o formulário */
-            margin: auto;
-            margin-top: 50px;
-        }
-
-        .navbar {
-            margin-bottom: 50px;
-        }
-
-        textarea {
-            resize: none; /* Impede o redimensionamento do textarea */
-        }
-    </style>
-
+    <title>Adicionar Clientes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Aluguel de Carros</a>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="logoIndex"><img src="../public/images/AutoAdminLogo.webp" alt="logo"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarAdmin">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Painel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul class="nav flex-column p-3">
                 <li class="nav-item">
-                    <a class="nav-link" href="/carros">Carros</a>
+                    <a class="nav-link" href="/carros">
+                        <i class="bi bi-car-front-fill"></i> Gerenciar Carros
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/clientes">Clientes</a>
+                    <a class="nav-link" href="/clientes">
+                        <i class="bi bi-people-fill"></i> Gerenciar Clientes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aluguel">
+                        <i class="bi bi-bookmark-fill"></i> Ver Reservas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-gear-fill"></i> Configurações
+                    </a>
                 </li>
             </ul>
         </div>
-    </nav>
     
     <div class="container">
         <h1 class="text-center">Cadastrar Novo Cliente</h1>
@@ -122,5 +93,16 @@
         </form>
     </div>
 
+ <!-- Rodapé -->
+ <footer class="footer">
+        <div class="container">
+            <span class="text-muted">© 2024 AutoAdmin. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS e dependências (Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ícones Bootstrap (opcional) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </body>
 </html>
