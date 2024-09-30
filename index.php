@@ -4,6 +4,14 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 
 if ($uri === '/' || $uri === '/index.php') {
+    require 'controllers/LoginController.php';
+    $controller = new LoginController();
+    $controller->index();
+}elseif ($uri === '/login') {
+    require 'controllers/LoginController.php';
+    $controller = new LoginController();
+    $controller->login();
+}elseif ($uri === '/home') {
     require 'controllers/CarrosController.php';
     $controller = new CarrosController();
     $controller->table();
