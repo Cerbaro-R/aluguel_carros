@@ -47,7 +47,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/aluguel">
-                        <i class="bi bi-bookmark-fill"></i> Ver Reservas
+                        <i class="bi bi-bookmark-fill"></i> Ver Alugueis
                     </a>
                 </li>
                 <li class="nav-item">
