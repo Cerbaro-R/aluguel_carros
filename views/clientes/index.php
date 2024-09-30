@@ -55,21 +55,21 @@
 
         <tr> 
 
-            <td><?= htmlspecialchars($cliente['nome']) ?></td> 
+            <td><?= htmlspecialchars($cliente->nome) ?></td> 
 
-            <td><?= htmlspecialchars($cliente['cpf']) ?></td> 
+            <td><?= htmlspecialchars($cliente->cpf) ?></td> 
 
-            <td><?= htmlspecialchars($cliente['telefone']) ?></td> 
+            <td><?= htmlspecialchars($cliente->telefone) ?></td> 
 
-            <td><?= htmlspecialchars($cliente['email']) ?></td> 
+            <td><?= htmlspecialchars($cliente->email) ?></td> 
 
-            <td><?= htmlspecialchars($cliente['endereco']) ?></td>
+            <td><?= htmlspecialchars($cliente->endereco) ?></td>
 
             <td> 
 
-                <a href="/clientes/edit/<?= $cliente['id'] ?>" class="btn btn-warning btn-sm">Editar</a> | 
+                <a href="/clientes/edit/<?= $cliente->id ?>" class="btn btn-warning btn-sm">Editar</a> | 
 
-                <a href="/clientes/delete/<?= $cliente['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a> 
+                <a href="/clientes/delete/<?= $cliente->id ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a> 
 
             </td> 
 

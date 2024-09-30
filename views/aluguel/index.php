@@ -30,6 +30,9 @@
             <td><?= htmlspecialchars($aluguel->data_fim) ?></td>
             <td><?= htmlspecialchars($aluguel->preco_total) ?></td>
             <td><?= htmlspecialchars($aluguel->status) ?></td>
+            <td>
+                <a href="/aluguel/edit/<?= $aluguel->id ?>" class="btn btn-warning btn-sm">Editar</a>
+            </td>
         </tr>
         <?php endforeach; ?>
     </tbody>

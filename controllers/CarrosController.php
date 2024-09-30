@@ -39,8 +39,6 @@ class CarrosController {
     }
 
     public function edit($id) {
-        
-        
         $carro = $this->model->getById($id);        
         include 'views/carros/edit.php';
     }

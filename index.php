@@ -59,10 +59,12 @@ elseif ($uri === '/aluguel') {
     require 'controllers/AluguelController.php';
     $controller = new AluguelController();
     $controller->create();
-}
-
-elseif ($uri === '/aluguel/store') {
+}elseif ($uri === '/aluguel/store') {
     require 'controllers/AluguelController.php';
     $controller = new AluguelController();
     $controller->store();
+}elseif (preg_match('/^\/aluguel\/edit\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/AluguelController.php';
+    $controller = new AluguelController();
+    $controller->edit($matches[1]);   
 }

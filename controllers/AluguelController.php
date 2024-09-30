@@ -24,7 +24,7 @@ class AluguelController {
     }
     public function create() {
         $carros = $this->carroModel->getAll();
-        $clientes = $this->clienteModel->getAllClientes();
+        $clientes = $this->clienteModel->getAll();
         include 'views/aluguel/create.php';
     }
 
@@ -42,5 +42,17 @@ class AluguelController {
 
         header('Location: /aluguel');
 
+    }
+
+    public function edit($id){
+        $aluguel = $this->model->getById($id);
+        $carros = $this->carroModel->getAll();
+        $clientes = $this->clienteModel->getAll();
+
+        if($aluguel) {
+            include 'views/aluguel/edit.php';
+        } else {
+            header('Location: /aluguel');
+        }
     }
 }

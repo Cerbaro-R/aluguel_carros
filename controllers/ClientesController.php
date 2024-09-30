@@ -36,7 +36,7 @@ class ClientesController {
     // exibir os clientes
     public function exibir() {
 
-        $clientes = $this->model->getAllClientes();
+        $clientes = $this->model->getAll();
 
         include 'views/clientes/index.php';
     }
@@ -52,7 +52,7 @@ class ClientesController {
     public function atualizar($id) {
         
         
-        $cliente = $this->model->getByIdClientes($id);        
+        $cliente = $this->model->getById($id);        
         include 'views/clientes/edit.php';
     }
 
