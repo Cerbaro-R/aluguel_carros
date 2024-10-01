@@ -11,8 +11,14 @@
     <div class="login-container">
         <img src="../public/images/AutoAdminLogo.webp" alt="AutoAdmin Logo" class="logo">
         <h2>Login</h2>
-        <form action="/login" method="post" class="mt-4">
 
+        <?php if (isset($error)): ?>
+            <div class="alert alert-danger" role="alert">
+                <?= $error ?>
+            </div>
+        <?php endif; ?>
+
+        <form action="/login" method="post" class="mt-4">
             <div class="mb-3">
                 <label for="user" class="form-label">Usuário</label>
                 <select id="user_id" name="user_id" class="form-control">
@@ -23,8 +29,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="password" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="rememberMe">

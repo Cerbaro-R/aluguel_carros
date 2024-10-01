@@ -16,13 +16,18 @@ class LoginController {
 
     }
 
-    public function login($id){
+    public function login(){
 
-        $user = $_POST['user_id'];
-        $password = $_POST['password'];
+        $id = $_POST['user_id'];
+        $senha = $_POST['senha'];
         $user = $this->model->getById($id);
-
-        print_r($user);
-
+        $senha_bd = $user->senha;
+        if($senha == $senha_bd){
+            header('Location: /home');
+        }else{
+            $users = $this->model->getAll();
+            $error = "Usuário ou senha inválidos";
+            require 'views/login/index.php';
+        }
     }
 }
