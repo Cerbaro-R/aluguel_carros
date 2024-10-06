@@ -11,15 +11,33 @@ require_once 'core/Database.php';
         }
 
         public function getAll() {
-            $query = $this -> db -> query("SELECT * FROM carros WHERE ativo = '1'");
+            $query = $this -> db -> query("SELECT carros.*, carro_status.status
+            FROM carros
+            INNER JOIN carro_status ON carros.carro_status_id = carro_status.id
+            WHERE carros.ativo = '1'
+            ORDER BY carros.id DESC");
             return $query -> fetchAll(PDO::FETCH_OBJ);
         }
 
         public function getById($id) {
-            $query = $this -> db -> prepare("SELECT * FROM carros WHERE id = :id");
+            $query = $this -> db -> prepare("SELECT carros.*, carro_status.status
+            FROM carros
+            INNER JOIN carro_status ON carros.carro_status_id = carro_status.id
+            WHERE carros.id = :id");
             $query -> bindParam(':id', $id);
             $query -> execute();
             return $query -> fetch(PDO::FETCH_ASSOC);
+        }
+
+        public function getStatus() {
+            // Preparar a consulta SQL para obter todos os status
+            $query = $this->db->prepare("SELECT * FROM carro_status");
+            
+            // Executar a consulta
+            $query->execute();
+            
+            // Retornar todos os resultados como um array de objetos
+            return $query->fetchAll(PDO::FETCH_OBJ);
         }
 
         public function insert($data) {
@@ -34,7 +52,7 @@ require_once 'core/Database.php';
         public function update($id, $data)
         {
 
-            $query = $this->db->prepare("UPDATE carros SET marca = :marca, modelo = :modelo, ano = :ano, cor = :cor, placa = :placa, preco_aluguel = :preco_aluguel, status = :status WHERE id = :id");
+            $query = $this->db->prepare("UPDATE carros SET marca = :marca, modelo = :modelo, ano = :ano, cor = :cor, placa = :placa, preco_aluguel = :preco_aluguel, carro_status_id = :carro_status_id WHERE id = :id");
     
             $data['id'] = $id;
     

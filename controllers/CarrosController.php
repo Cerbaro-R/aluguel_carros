@@ -35,8 +35,7 @@ class CarrosController {
             'ano' => $_POST['ano'],
             'cor' => $_POST['cor'],
             'placa' => $_POST['placa'],
-            'preco_aluguel' => $_POST['preco_aluguel'],
-            'status' => 'Em cadastramento'
+            'preco_aluguel' => $_POST['preco_aluguel']
         ]; 
 
         $this->model->insert($data);
@@ -45,7 +44,10 @@ class CarrosController {
     }
 
     public function edit($id) {
-        $carro = $this->model->getById($id);        
+        $carro = $this->model->getById($id);  
+        $status = $this->model->getStatus();
+        
+        print_r($carro);
         include 'views/carros/edit.php';
     }
 
@@ -57,7 +59,7 @@ class CarrosController {
             'cor' => $_POST['cor'],
             'placa' => $_POST['placa'],
             'preco_aluguel' => $_POST['preco_aluguel'],
-            'status' => $_POST['status']
+            'carro_status_id' => $_POST['carro_status_id']
         ];
     
         $this->model->update($id, $data);
