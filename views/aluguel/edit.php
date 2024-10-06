@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Aluguel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css.css">
+    <link rel="stylesheet" href="../../public/css.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <div class="logoIndex"><img src="../public/images/AutoAdminLogo.webp" alt="logo"></div>
+            <div class="logoIndex"><img src="../../public/images/AutoAdminLogo.webp" alt="logo"></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -83,7 +83,7 @@
                             <?php foreach ($clientes as $cliente): ?>
                             <option value="<?= $cliente->id ?>"
                                 <?= $cliente->id == $aluguel->cliente_id ? 'selected' : '' ?>>
-                                <?= $cliente->id ?> - <?= $cliente->nome ?>
+                                <?= $cliente->nome ?>
                             </option>
                             <?php endforeach; ?>
                         </select>

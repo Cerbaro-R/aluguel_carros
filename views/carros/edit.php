@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Carros</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css.css">
+    <link rel="stylesheet" href="../../public/css.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
     <!--Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="logoIndex"><img src="../public/images/AutoAdminLogo.webp" alt="logo"></div>
+        <div class="logoIndex"><img src="../../public/images/AutoAdminLogo.webp" alt="logo"></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -98,7 +99,7 @@
                             <?php foreach ($status as $statusItem): ?>
                             <option value="<?= $statusItem->id ?>"
                                 <?= $statusItem->id == $carro->carro_status_id ? 'selected' : '' ?>>
-                                <?= $statusItem->id ?> - <?= $statusItem->status ?>
+                                <?= $statusItem->status ?>
                             </option>
                             <?php endforeach; ?>
                         </select>

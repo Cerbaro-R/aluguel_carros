@@ -43,11 +43,11 @@ class CarrosController {
         header('Location: /carros');
     }
 
+
     public function edit($id) {
         $carro = $this->model->getById($id);  
         $status = $this->model->getStatus();
         
-        print_r($carro);
         include 'views/carros/edit.php';
     }
 
