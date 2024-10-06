@@ -91,15 +91,27 @@
                         <label for="preco_aluguel" class="form-label">Preço do Aluguel</label>
                         <input type="text" class="form-control" id="preco_aluguel" name="preco_aluguel" value="<?= htmlspecialchars($carro['preco_aluguel']) ?>" required>
                     </div>
+                    <div class="row mb-3">
                     <div class="col-md-6">
-                        <label for="status" class="form-label">Status</label>
-                        <input type="text" class="form-control" id="status" name="status" value="<?= htmlspecialchars($carro['status']) ?>" required>
+                        <label for="carro_status_id" class="form-label">Status</label>
+                        <select id="carro_status_id" name="carro_status_id" class="form-control">
+                            <?php foreach ($status as $statusItem): ?>
+                            <option value="<?= $statusItem->id ?>"
+                                <?= $statusItem->id == $carro->carro_status_id ? 'selected' : '' ?>>
+                                <?= $statusItem->id ?> - <?= $statusItem->status ?>
+                            </option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                 </div>
+                </div>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-                <a href="/carros/delete/<?= $carro['id'] ?>" class="btn btn-danger ms-2">Inativar
+                <a href="/carros/delete/<?= $carro['id'] ?>" class="btn btn-danger ms-2">Excluír</a>
             </form>
         </div>
+    </div>
     </div>
 
     <!-- Rodapé -->
