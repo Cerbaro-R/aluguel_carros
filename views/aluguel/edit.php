@@ -110,8 +110,15 @@
 
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label for="status" class="form-label">Status</label>
-                        <input type="text" id="status" name="status" class="form-control" value= "<?= $aluguel->status ?>" required>
+                        <label for="aluguel_status_id" class="form-label">Status</label>
+                        <select id="aluguel_status_id" name="aluguel_status_id" class="form-control">
+                            <?php foreach ($status as $statusItem): ?>
+                            <option value="<?= $statusItem->id ?>"
+                                <?= $statusItem->id == $aluguel->aluguel_status_id ? 'selected' : '' ?>>
+                                <?= $statusItem->id ?> - <?= $statusItem->status ?>
+                            </option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                 </div>
 

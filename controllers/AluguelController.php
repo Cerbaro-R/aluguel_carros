@@ -35,7 +35,6 @@ class AluguelController {
             'data_inicio' => $_POST['data_inicio'],
             'data_fim' => $_POST['data_fim'],
             'preco_total' => $_POST['preco_total'],
-            'status' => 'Em aberto'
         ];
 
         $this->model->insert($data);
@@ -48,6 +47,7 @@ class AluguelController {
         $aluguel = $this->model->getById($id);
         $carros = $this->carroModel->getAll();
         $clientes = $this->clienteModel->getAll();
+        $status = $this->model->getStatus();
 
         if($aluguel) {
             include 'views/aluguel/edit.php';
@@ -68,7 +68,7 @@ class AluguelController {
             'data_inicio' => $_POST['data_inicio'],
             'data_fim' => $_POST['data_fim'],
             'preco_total' => $_POST['preco_total'],
-            'status' => $_POST['status']
+            'aluguel_status_id' => $_POST['aluguel_status_id']
         ];
 
         $this->model->update($id, $data);
