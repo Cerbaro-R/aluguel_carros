@@ -115,7 +115,7 @@
                             <?php foreach ($status as $statusItem): ?>
                             <option value="<?= $statusItem->id ?>"
                                 <?= $statusItem->id == $aluguel->aluguel_status_id ? 'selected' : '' ?>>
-                                <?= $statusItem->id ?> - <?= $statusItem->status ?>
+                                <?= $statusItem->status ?>
                             </option>
                             <?php endforeach; ?>
                         </select>
