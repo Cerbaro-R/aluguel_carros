@@ -11,13 +11,13 @@ class AluguelModel {
 
     public function getAll() {
         $query = $this->db->prepare(
-            "SELECT alugueis.*, carros.marca, carros.modelo, clientes.nome
+            "SELECT alugueis.*, carros.marca, carros.modelo, clientes.nome, aluguel_status.status
             FROM alugueis
             INNER JOIN carros ON alugueis.carro_id = carros.id
             INNER JOIN clientes ON alugueis.cliente_id = clientes.id
-            WHERE alugueis.ativo = 1
+            INNER JOIN aluguel_status ON alugueis.aluguel_status_id = aluguel_status.id
             ORDER BY alugueis.data_inicio DESC"
-        );
+        );        
     
         if($query->execute()) {
             return $query->fetchAll(PDO::FETCH_OBJ);
@@ -56,8 +56,8 @@ class AluguelModel {
         return $query->execute($data);
     }
 
-    public function inativar($id){
-        $query = $this->db->prepare("UPDATE alugueis SET ativo = '0' WHERE id = :id");
+    public function delete($id){
+        $query = $this->db->prepare("DELETE FROM alugueis WHERE id = :id");
 
         return $query->execute(['id' => $id]);
     }    

@@ -118,7 +118,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-primary">Atualizar Aluguel</button>
-                        <a href="/aluguel/delete/<?= $aluguel->id ?>" class="btn btn-danger ms-2">Inativar</a>
+                        <a href="/aluguel/delete/<?= $aluguel->id ?>" class="btn btn-danger ms-2" onclick="return confirm('Tem certeza que deseja excluir este aluguel?')">Excluir</a>
                     </div>
                 </div>
             </form>
