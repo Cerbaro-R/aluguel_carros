@@ -55,8 +55,8 @@ class AluguelController {
             header('Location: /aluguel');
         }
     }
-    public function inativar($id){
-        $this -> model -> inativar($id);
+    public function delete($id){
+        $this -> model -> delete($id);
 
         header ('Location: /aluguel');
     }

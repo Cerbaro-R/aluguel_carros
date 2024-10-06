@@ -84,5 +84,5 @@ elseif ($uri === '/aluguel') {
 }elseif (preg_match('/^\/aluguel\/delete\/(\d+)$/', $uri, $matches)) {
     require 'controllers/AluguelController.php';
     $controller = new AluguelController();
-    $controller->inativar($matches[1]);
+    $controller->delete($matches[1]);
 }
