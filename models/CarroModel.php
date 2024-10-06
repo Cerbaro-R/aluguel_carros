@@ -26,7 +26,7 @@ require_once 'core/Database.php';
             WHERE carros.id = :id");
             $query -> bindParam(':id', $id);
             $query -> execute();
-            return $query -> fetch(PDO::FETCH_ASSOC);
+            return $query -> fetch(PDO::FETCH_OBJ);
         }
 
         public function getStatus() {

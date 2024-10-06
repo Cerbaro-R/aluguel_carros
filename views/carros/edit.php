@@ -61,35 +61,35 @@
     <div class="container mt-4">
         <h1 class="mb-4">Editar Carro</h1>
         <div class="form-container">
-            <form action="/carros/update/<?= $carro['id'] ?>" method="post">
+            <form action="/carros/update/<?= $carro->id ?>" method="post">
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="marca" class="form-label">Marca</label>
-                        <input type="text" class="form-control" id="marca" name="marca" value="<?= htmlspecialchars($carro['marca']) ?>" required>
+                        <input type="text" class="form-control" id="marca" name="marca" value="<?= htmlspecialchars($carro->marca) ?>" required>
                     </div>
                     <div class="col-md-6">
                         <label for="modelo" class="form-label">Modelo</label>
-                        <input type="text" class="form-control" id="modelo" name="modelo" value="<?= htmlspecialchars($carro['modelo']) ?>" required>
+                        <input type="text" class="form-control" id="modelo" name="modelo" value="<?= htmlspecialchars($carro->modelo) ?>" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-4">
                         <label for="ano" class="form-label">Ano</label>
-                        <input type="text" class="form-control" id="ano" name="ano" value="<?= htmlspecialchars($carro['ano']) ?>" required>
+                        <input type="text" class="form-control" id="ano" name="ano" value="<?= htmlspecialchars($carro->ano) ?>" required>
                     </div>
                     <div class="col-md-4">
                         <label for="cor" class="form-label">Cor</label>
-                        <input type="text" class="form-control" id="cor" name="cor" value="<?= htmlspecialchars($carro['cor']) ?>" required>
+                        <input type="text" class="form-control" id="cor" name="cor" value="<?= htmlspecialchars($carro->cor) ?>" required>
                     </div>
                     <div class="col-md-4">
                         <label for="placa" class="form-label">Placa</label>
-                        <input type="text" class="form-control" id="placa" name="placa" value="<?= htmlspecialchars($carro['placa']) ?>" required>
+                        <input type="text" class="form-control" id="placa" name="placa" value="<?= htmlspecialchars($carro->placa) ?>" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="preco_aluguel" class="form-label">Preço do Aluguel</label>
-                        <input type="text" class="form-control" id="preco_aluguel" name="preco_aluguel" value="<?= htmlspecialchars($carro['preco_aluguel']) ?>" required>
+                        <input type="text" class="form-control" id="preco_aluguel" name="preco_aluguel" value="<?= htmlspecialchars($carro->preco_aluguel) ?>" required>
                     </div>
                     <div class="row mb-3">
                     <div class="col-md-6">
