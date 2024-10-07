@@ -63,8 +63,12 @@
         <form action="/carros/store" method="post" class="mt-4">
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="marca" class="form-label">Marca</label>
-                    <input type="text" class="form-control" id="marca" name="marca" required>
+                    <label for="marca_id" class="form-label">Marca</label>
+                    <select id="marca_id" name="marca_id" class="form-control">
+                        <?php foreach ($marcas as $marca): ?>
+                        <option value="<?= $marca->id ?>"><?= $marca->marca ?></option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
                 <div class="col-md-6">
                     <label for="modelo" class="form-label">Modelo</label>

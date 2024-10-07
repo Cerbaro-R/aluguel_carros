@@ -22,6 +22,8 @@ class CarrosController {
     }
 
     public function create() {
+
+        $marcas = $this->model->getMarcas();
         
         include 'views/carros/create.php';
 
@@ -30,7 +32,7 @@ class CarrosController {
     public function store() {
 
         $data = [
-            'marca' => $_POST['marca'],
+            'marca_id' => $_POST['marca_id'],
             'modelo' => $_POST['modelo'],
             'ano' => $_POST['ano'],
             'cor' => $_POST['cor'],
@@ -46,6 +48,7 @@ class CarrosController {
 
     public function edit($id) {
         $carro = $this->model->getById($id);  
+        $marcas = $this->model->getMarcas();
         $status = $this->model->getStatus();
         
         include 'views/carros/edit.php';
@@ -53,7 +56,7 @@ class CarrosController {
 
     public function update($id) {
         $data = [
-            'marca' => $_POST['marca'],
+            'marca_id' => $_POST['marca_id'],
             'modelo' => $_POST['modelo'],
             'ano' => $_POST['ano'],
             'cor' => $_POST['cor'],
