@@ -20,6 +20,16 @@ require_once 'core/Database.php';
             return $query -> fetchAll(PDO::FETCH_OBJ);
         }
 
+        public function getDisponiveis() {
+            $query = $this -> db -> query("SELECT carros.*, carro_status.status, carro_marca.marca
+            FROM carros
+            INNER JOIN carro_status ON carros.carro_status_id = carro_status.id
+            INNER JOIN carro_marca ON carros.marca_id = carro_marca.id
+            WHERE carros.ativo = '1' AND carro_status_id = '1'
+            ORDER BY carros.id DESC");
+            return $query -> fetchAll(PDO::FETCH_OBJ);            
+        }
+
         public function getById($id) {
             $query = $this -> db -> prepare("SELECT carros.*, carro_status.status, carro_marca.marca
             FROM carros
@@ -67,6 +77,13 @@ require_once 'core/Database.php';
             $data['id'] = $id;
     
             return $query->execute($data);
+        }
+
+        public function reservar($id) {
+
+            print_r($id);
+
+            $query = $this->db->prepare("UPDATE carros SET carro_status_id = '3' WHERE id = :id");
         }
 
         public function inativar($id) {

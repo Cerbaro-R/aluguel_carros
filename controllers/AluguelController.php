@@ -23,7 +23,7 @@ class AluguelController {
         
     }
     public function create() {
-        $carros = $this->carroModel->getAll();
+        $carros = $this->carroModel->getDisponiveis();
         $clientes = $this->clienteModel->getAll();
         include 'views/aluguel/create.php';
     }
