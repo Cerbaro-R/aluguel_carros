@@ -65,8 +65,14 @@
             <form action="/carros/update/<?= $carro->id ?>" method="post">
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label for="marca" class="form-label">Marca</label>
-                        <input type="text" class="form-control" id="marca" name="marca" value="<?= htmlspecialchars($carro->marca) ?>" required>
+                        <label for="marca_id" class="form-label">Marca</label>
+                        <select id="marca_id" name="marca_id" class="form-control">
+                            <?php foreach ($marcas as $marca): ?>
+                            <option value="<?= $marca->id ?>" <?= $carro->marca_id == $marca->id ? 'selected' : '' ?>>
+                                <?= $marca->marca ?>
+                            </option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                     <div class="col-md-6">
                         <label for="modelo" class="form-label">Modelo</label>

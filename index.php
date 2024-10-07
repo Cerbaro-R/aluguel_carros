@@ -24,7 +24,9 @@ if ($uri === '/' || $uri === '/index.php') {
     $controller = new CarrosController();
     $controller->store();
 }elseif ($uri === '/carros/create') {
-    include 'views/carros/create.php';
+    require 'controllers/CarrosController.php';
+    $controller = new CarrosController();
+    $controller->create();
 }elseif (preg_match('/^\/carros\/edit\/(\d+)$/', $uri, $matches)) {
     require 'controllers/CarrosController.php';
     $controller = new CarrosController();
