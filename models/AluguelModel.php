@@ -11,11 +11,12 @@ class AluguelModel {
 
     public function getAll() {
         $query = $this->db->prepare(
-            "SELECT alugueis.*, carros.marca, carros.modelo, clientes.nome, aluguel_status.status
+            "SELECT alugueis.*, carros.marca_id, carros.modelo, clientes.nome, aluguel_status.status, carro_marca.marca
             FROM alugueis
             INNER JOIN carros ON alugueis.carro_id = carros.id
             INNER JOIN clientes ON alugueis.cliente_id = clientes.id
             INNER JOIN aluguel_status ON alugueis.aluguel_status_id = aluguel_status.id
+            INNER JOIN carro_marca ON carros.marca_id = carro_marca.id
             ORDER BY alugueis.data_inicio DESC"
         );        
     
@@ -27,11 +28,12 @@ class AluguelModel {
 
     public function getById($id) {
         $query = $this->db->prepare
-            ("SELECT alugueis.*, carros.marca, carros.modelo, clientes.nome, aluguel_status.status
+            ("SELECT alugueis.*, carros.marca_id, carros.modelo, clientes.nome, aluguel_status.status, carro_marca.marca
             FROM alugueis
             INNER JOIN carros ON alugueis.carro_id = carros.id
             INNER JOIN clientes ON alugueis.cliente_id = clientes.id
             INNER JOIN aluguel_status ON alugueis.aluguel_status_id = aluguel_status.id
+            INNER JOIN carro_marca ON carros.marca_id = carro_marca.id
             WHERE alugueis.id = :id;");
             
             $query->bindParam(':id', $id, PDO::PARAM_INT);

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pr-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Cliente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css.css">
+    <link rel="stylesheet" href="../../public/css.css">
 </head>
 <body>
     <!--Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="logoIndex"><img src="../public/images/AutoAdminLogo.webp" alt="logo"></div>
+        <div class="logoIndex"><img src="../../public/images/AutoAdminLogo.webp" alt="logo"></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarAdmin">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Painel</a>
+              <a class="nav-link active" aria-current="page" href="/home">Painel</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sair</a>
+              <a class="nav-link" href="/">Sair</a>
             </li>
           </ul>
         </div>
@@ -37,17 +37,17 @@
             <ul class="nav flex-column p-3">
                 <li class="nav-item">
                     <a class="nav-link" href="/carros">
-                        <i class="bi bi-car-front-fill"></i> Gerenciar Carros
+                        <i class="bi bi-car-front-fill"></i> Carros
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/clientes">
-                        <i class="bi bi-people-fill"></i> Gerenciar Clientes
+                        <i class="bi bi-people-fill"></i> Clientes
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/aluguel">
-                        <i class="bi bi-bookmark-fill"></i> Ver Alugueis
+                        <i class="bi bi-bookmark-fill"></i> Alugueis
                     </a>
                 </li>
                 <li class="nav-item">

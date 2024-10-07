@@ -24,7 +24,7 @@
               <a class="nav-link" href="#">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sair</a>
+              <a class="nav-link" href="/">Sair</a>
             </li>
           </ul>
         </div>
@@ -37,17 +37,17 @@
             <ul class="nav flex-column p-3">
                 <li class="nav-item">
                     <a class="nav-link" href="/carros">
-                        <i class="bi bi-car-front-fill"></i> Gerenciar Carros
+                        <i class="bi bi-car-front-fill"></i> Carros
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/clientes">
-                        <i class="bi bi-people-fill"></i> Gerenciar Clientes
+                        <i class="bi bi-people-fill"></i> Clientes
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/aluguel">
-                        <i class="bi bi-bookmark-fill"></i> Ver Alugueis
+                        <i class="bi bi-bookmark-fill"></i> Alugueis
                     </a>
                 </li>
                 <li class="nav-item">
