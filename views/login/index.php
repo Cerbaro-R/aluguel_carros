@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - AutoAdmin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css.css">
+    <link rel="stylesheet" href="../../public/css.css">
 </head>
 <body id="pageLogin">
     <div class="login-container">
-        <img src="../public/images/AutoAdminLogo.webp" alt="AutoAdmin Logo" class="logo">
+        <img src="../../public/images/AutoAdminLogo.webp" alt="AutoAdmin Logo" class="logo">
         <h2>Login</h2>
 
         <?php if (isset($error)): ?>

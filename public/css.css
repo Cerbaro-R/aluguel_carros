@@ -43,7 +43,7 @@ body {
 }
 
 #pageLogin {
-    background: url('../imagens/PageLogin1.jpg') no-repeat center center fixed;
+    background: url('../public/images/PageLogin1.jpg') no-repeat center center fixed;
     background-size: cover;
     background-position: center;
     height: 100vh;
