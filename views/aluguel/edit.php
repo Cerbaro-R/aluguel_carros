@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +18,13 @@
             <div class="collapse navbar-collapse" id="navbarAdmin">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Painel</a>
+                        <a class="nav-link active" aria-current="page" href="/home">Painel</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sair</a>
+                        <a class="nav-link" href="/">Sair</a>
                     </li>
                 </ul>
             </div>
@@ -37,17 +37,17 @@
             <ul class="nav flex-column p-3">
                 <li class="nav-item">
                     <a class="nav-link" href="/carros">
-                        <i class="bi bi-car-front-fill"></i> Gerenciar Carros
+                        <i class="bi bi-car-front-fill"></i> Carros
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/clientes">
-                        <i class="bi bi-people-fill"></i> Gerenciar Clientes
+                        <i class="bi bi-people-fill"></i> Clientes
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/aluguel">
-                        <i class="bi bi-bookmark-fill"></i> Ver Alugueis
+                        <i class="bi bi-bookmark-fill"></i> Alugueis
                     </a>
                 </li>
                 <li class="nav-item">
