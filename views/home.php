@@ -86,7 +86,7 @@
                 </div>
                 <!-- Card Ver Reservas -->
                 <div class="col-md-4">
-                    <div class="card text-white bg-warning mb-3">
+                    <div class="card text-white bg-secondary mb-3">
                       <div class="card-header">Alugueis</div>
                       <div class="card-body">
                         <h5 class="card-title">Ver Alugueis</h5>

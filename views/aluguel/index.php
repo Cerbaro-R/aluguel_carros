@@ -62,7 +62,7 @@
             <h1 class="text-center">Histórico de Aluguéis</h1>
             <a href="/aluguel/create" class="btn btn-primary mb-3">Alugar Veículo</a>
             
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover table-info">
                 <thead class="table-dark">
                     <tr>
                         <th>Marca</th>

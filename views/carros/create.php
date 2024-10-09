@@ -57,9 +57,12 @@
                 </li>
             </ul>
         </div>
-
-        <div class="container mt-4 form-container">
+        <div class="content">
+        
         <h1>Cadastrar Novo Carro</h1>
+        
+<div class="card mb-4">
+    <div class="card-body">
         <form action="/carros/store" method="post" class="mt-4">
             <div class="row mb-3">
                 <div class="col-md-6">
@@ -97,6 +100,9 @@
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar Carro</button>
         </form>
+    </div>
+    </div>
+    </div>
     </div>
 
     <!-- Rodapé -->

@@ -64,8 +64,8 @@
             <div class="mb-3">
                 <a href="/carros/create" class="btn btn-success">Adicionar Carro</a>
             </div>
-            <table class="table table-striped table-hover table-bordered">
-                <thead>
+            <table class="table table-striped table-hover table-bordered table-info">
+                <thead class="table-dark">
                     <tr>
                         <th>Marca</th>
                         <th>Modelo</th>
