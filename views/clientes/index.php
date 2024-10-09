@@ -64,8 +64,8 @@
             <div class="mb-3">
                 <a href="/clientes/create" class="btn btn-success">Cadastrar Novo Cliente</a>
             </div>
-            <table class="table table-striped table-hover table-bordered">
-                <thead>
+            <table class="table table-striped table-hover table-bordered table-info">
+                <thead class="table-dark">
                     <tr>
                         <th>Nome</th>
                         <th>CPF</th>
