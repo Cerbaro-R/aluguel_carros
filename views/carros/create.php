@@ -61,7 +61,7 @@
         
         <h1>Cadastrar Novo Carro</h1>
         
-<div class="card mb-4">
+<div id="cadastro" class="card mb-4">
     <div class="card-body">
         <form action="/carros/store" method="post" class="mt-4">
             <div class="row mb-3">
