@@ -60,7 +60,10 @@
 
     <div class="container mt-4 form-container">
      
-    <h1>Alugar Carro</h1>
+    <h1 class="text-center">Alugar Carro</h1>
+
+    <div class="card mb-4">     
+        <div id="cadastro" class="card-body">
         <form action="/aluguel/store" method="post" class="mt-4">
             <div class="row mb-3">
                 <div class="col-md-6">
@@ -110,6 +113,9 @@
 
         <script src="../../public/js.js"></script>
 
+    </div>
+    </div>
+    </div>
     </div>
 
    <!-- Rodapé -->

@@ -58,39 +58,49 @@
             </ul>
         </div>
     
-    <div class="container">
+    <div class="content">
         <h1 class="text-center">Cadastrar Novo Cliente</h1>
+        
+    <div class="card mb-4">     
+        <div id="cadastro" class="card-body">
 
         <form action="/clientes/criar" method="POST">
-            <div class="mb-3">
+        <div class="row mb-3">
+            <div class="col-md-6">
                 <label for="nome" class="form-label">Nome:</label>
                 <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome completo" required>
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-4">
                 <label for="cpf" class="form-label">CPF:</label>
                 <input type="text" id="cpf" name="cpf" class="form-control" placeholder="Digite o CPF" required>
             </div>
+            </div>
 
-            <div class="mb-3">
+            <div class="row mb-3">
+            <div class="col-md-4">
                 <label for="telefone" class="form-label">Telefone:</label>
                 <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Digite o telefone" required>
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-4">
                 <label for="email" class="form-label">E-mail:</label>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Digite o e-mail" required>
             </div>
+            </div>
 
-            <div class="mb-3">
+            <div class="row mb-3">
+            <div class="col-md-6">
                 <label for="endereco" class="form-label">Endereço:</label>
-                <textarea id="endereco" name="endereco" class="form-control" rows="3" placeholder="Digite o endereço completo" required></textarea>
+                <textarea id="endereco" name="endereco" class="form-control" rows="2" placeholder="Digite o endereço completo" required></textarea>
+            </div>
             </div>
 
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Cadastrar Cliente</button>
-            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar Cliente</button>
         </form>
+    </div>
+    </div>
+    </div>
     </div>
 
  <!-- Rodapé -->
