@@ -20,7 +20,18 @@ class AluguelController {
     public function index() {
         $alugueis = $this->model->getAll();
         require 'views/aluguel/index.php';
-        
+
+        $date = date('Y-m-d');
+
+        foreach($alugueis as $aluguel) {
+            $dataFim = $aluguel->data_fim;
+            $dataInicio = $aluguel->data_inicio;
+            $id = $aluguel->carro_id;
+
+            if($dataFim >= $date && $dataInicio <= $date) {
+                $this->carroModel->alugar($id);
+            }
+        }
     }
     public function create() {
         $carros = $this->carroModel->getDisponiveis();

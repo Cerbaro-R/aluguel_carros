@@ -79,11 +79,10 @@ require_once 'core/Database.php';
             return $query->execute($data);
         }
 
-        public function reservar($id) {
-
+        public function alugar($id) {
             print_r($id);
-
-            $query = $this->db->prepare("UPDATE carros SET carro_status_id = '3' WHERE id = :id");
+            $query = $this->db->prepare("UPDATE carros SET carro_status_id = '2' WHERE id = :id");
+            return $query->execute(['id' => $id]);
         }
 
         public function inativar($id) {
