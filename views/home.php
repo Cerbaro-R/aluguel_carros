@@ -64,7 +64,7 @@
             <div class="row">
                 <!-- Card Gerenciar Carros -->
                 <div class="col-md-4">
-                    <div class="card text-white bg-primary mb-3">
+                    <div id="box" class="card text-white bg-primary mb-3">
                       <div class="card-header">Carros</div>
                       <div class="card-body">
                         <h5 class="card-title">Gerenciar Carros</h5>
@@ -75,7 +75,7 @@
                 </div>
                 <!-- Card Gerenciar Usuários -->
                 <div class="col-md-4">
-                    <div class="card text-white bg-success mb-3">
+                    <div id="box" class="card text-white bg-success mb-3">
                       <div class="card-header">Clientes</div>
                       <div class="card-body">
                         <h5 class="card-title">Gerenciar Clientes</h5>
@@ -86,7 +86,7 @@
                 </div>
                 <!-- Card Ver Reservas -->
                 <div class="col-md-4">
-                    <div class="card text-white bg-secondary mb-3">
+                    <div id="box" class="card text-white bg-secondary mb-3">
                       <div class="card-header">Alugueis</div>
                       <div class="card-body">
                         <h5 class="card-title">Ver Alugueis</h5>

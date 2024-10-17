@@ -96,8 +96,8 @@
     </div>
 
     <!-- Rodapé -->
-    <footer class="footer mt-auto py-3 bg-dark text-light">
-        <div class="container text-center">
+    <footer class="footer">
+        <div class="container">
             <span class="text-muted">© 2024 AutoAdmin. Todos os direitos reservados.</span>
         </div>
     </footer>
