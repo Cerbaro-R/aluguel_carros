@@ -20,14 +20,14 @@ class ClienteModel {
     }
 
     public function getAll() {
-        $cliente = $this->db->prepare("SELECT * FROM clientes");
+        $cliente = $this->db->prepare("SELECT * FROM clientes WHERE Ativo = '1'" );
         $cliente->execute();
         return $cliente->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function excluir($id) {
 
-        $query = $this->db->prepare("DELETE FROM clientes WHERE id = :id");
+        $query = $this->db->prepare("UPDATE clientes  SET ativo = '0' WHERE id = :id");
 
         return $query->execute(['id' => $id]);
     }
