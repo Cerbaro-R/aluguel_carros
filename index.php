@@ -91,4 +91,12 @@ elseif ($uri === '/aluguel') {
     require 'controllers/ConfigController.php';
     $controller = new ConfigController();
     $controller->index();
+}elseif ($uri === '/config/users') {
+    require 'controllers/ConfigController.php';
+    $controller = new ConfigController();
+    $controller->users();
+}elseif ($uri === '/config/users/store') {
+    require 'controllers/ConfigController.php';
+    $controller = new ConfigController();
+    $controller->storeUser();
 }
