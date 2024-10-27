@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarAdmin">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Painel</a>
+              <a class="nav-link active" aria-current="page" href="/home">Painel</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Perfil</a>
@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/config">
+                    <a class="nav-link" href="#">
                         <i class="bi bi-gear-fill"></i> Configurações
                     </a>
                 </li>
@@ -60,84 +60,31 @@
 
          <!-- Conteúdo Principal -->
          <div class="content">
-            <h1>Bem-vindo ao Painel de Alugueis</h1>
+            <h1>Configurações</h1>
             <div class="row">
-                <!-- Card Gerenciar Carros -->
+                <!-- Card cadastrar usuários -->
                 <div class="col-md-4">
                     <div id="box" class="card text-white bg-primary mb-3">
-                      <div class="card-header">Carros</div>
+                      <div class="card-header">Usuários</div>
                       <div class="card-body">
-                        <h5 class="card-title">Gerenciar Carros</h5>
-                        <p class="card-text">Adicionar, editar ou remover veículos do sistema.</p>
+                        <h5 class="card-title">Gerenciar Usuários</h5>
                         <a href="/carros" class="btn btn-light rounded-pill">Acessar</a>
                       </div>
                     </div>
                 </div>
-                <!-- Card Gerenciar Usuários -->
+                <!-- Card Gerenciar Status -->
                 <div class="col-md-4">
                     <div id="box" class="card text-white bg-success mb-3">
-                      <div class="card-header">Clientes</div>
+                      <div class="card-header">Status</div>
                       <div class="card-body">
-                        <h5 class="card-title">Gerenciar Clientes</h5>
-                        <p class="card-text">Visualizar e gerenciar cadastros de clientes</p>
+                        <h5 class="card-title">Gerenciar Status</h5>
                         <a href="/clientes" class="btn btn-light rounded-pill">Acessar</a>
                       </div>
                     </div>
                 </div>
-                <!-- Card Ver Reservas -->
-                <div class="col-md-4">
-                    <div id="box" class="card text-white bg-secondary mb-3">
-                      <div class="card-header">Alugueis</div>
-                      <div class="card-body">
-                        <h5 class="card-title">Ver Alugueis</h5>
-                        <p class="card-text">Monitorar e gerenciar alugueis de veículos.</p>
-                        <a href="/aluguel" class="btn btn-light rounded-pill">Acessar</a>
-                      </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="container mt-4"> <!-- Adicionando a classe container aqui -->
-                <table class="table table-striped table-hover table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Marca</th>
-                            <th>Modelo</th>
-                            <th>Ano</th>
-                            <th>Cor</th>
-                            <th>Placa</th>
-                            <th>Preço do Aluguel</th>
-                            <th>Status</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach($carros as $carro): ?>
-                        <tr>
-                            <td><?= htmlspecialchars($carro->marca) ?></td>
-                            <td><?= htmlspecialchars($carro->modelo) ?></td>
-                            <td><?= htmlspecialchars($carro->ano) ?></td>
-                            <td><?= htmlspecialchars($carro->cor) ?></td>
-                            <td><?= htmlspecialchars($carro->placa) ?></td>
-                            <td><?= htmlspecialchars($carro->preco_aluguel) ?></td>
-                            <td><?= htmlspecialchars($carro->status) ?></td>
-                            <td>
-                                <a href="/carros/edit/<?= $carro->id ?>" class="btn btn-warning btn-sm">Editar</a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-     </div>
 
-     <!-- Rodapé -->
-     <footer class="footer">
-        <div class="container">
-            <span class="text-muted">© 2024 AutoAdmin. Todos os direitos reservados.</span>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS e dependências (Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
