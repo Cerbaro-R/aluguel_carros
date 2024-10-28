@@ -99,8 +99,8 @@
                     <tr>
                         <td><?= htmlspecialchars($user->nome) ?></td>
                         <td>
-                            <a href="/clientes/edit/<?= $cliente->id ?>" class="btn btn-warning btn-sm">Editar</a> |
-                            <a href="/clientes/delete/<?= $cliente->id ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                            <a href="/users/edit/<?= $user->id ?>" class="btn btn-warning btn-sm">Editar</a> |
+                            <a href="/users/delete/<?= $user->id ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
