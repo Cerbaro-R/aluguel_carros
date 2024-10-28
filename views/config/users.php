@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Clientes</title>
+    <title>Lista de Clientes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/css.css">
 </head>
@@ -11,7 +11,7 @@
     <!--Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="logoIndex"><img src="../public/images/AutoAdminLogo.webp" alt="logo"></div>
+        <div class="logoIndex"><img src="public/images/AutoAdminLogo.webp" alt="logo"></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,54 +57,60 @@
                 </li>
             </ul>
         </div>
-    
-    <div class="content">
+
+        <!-- Conteúdo Principal -->
+        <div class="container mt-4">
+        <div class="content">
         <h1 class="text-center">Cadastrar Novo Cliente</h1>
         
     <div class="card mb-4">     
         <div id="cadastro" class="card-body">
 
-        <form action="/clientes/criar" method="POST">
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label for="nome" class="form-label">Nome:</label>
-                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome completo" required>
-            </div>
+        <form action="/config/users/store" method="POST">
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="name" class="form-label">Nome:</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Digite o nome completo" required>
+        </div>
+    </div>
+    
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="password" class="form-label">Senha:</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Digite a senha" required>
+        </div>
+    </div>
 
-            <div class="col-md-4">
-                <label for="cpf" class="form-label">CPF:</label>
-                <input type="text" id="cpf" name="cpf" class="form-control" placeholder="Digite o CPF" required>
-            </div>
-            </div>
-
-            <div class="row mb-3">
-            <div class="col-md-4">
-                <label for="telefone" class="form-label">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Digite o telefone" required>
-            </div>
-
-            <div class="col-md-4">
-                <label for="email" class="form-label">E-mail:</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Digite o e-mail" required>
-            </div>
-            </div>
-
-            <div class="row mb-3">
-            <div class="col-md-6">
-                <label for="endereco" class="form-label">Endereço:</label>
-                <textarea id="endereco" name="endereco" class="form-control" rows="2" placeholder="Digite o endereço completo" required></textarea>
-            </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Cadastrar Cliente</button>
-        </form>
+    <button type="submit" class="btn btn-primary">Cadastrar Usuário</button>
+</form>
     </div>
     </div>
     </div>
     </div>
+            <table class="table table-striped table-hover table-bordered table-info">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($users as $user): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($user->nome) ?></td>
+                        <td>
+                            <a href="/users/edit/<?= $user->id ?>" class="btn btn-warning btn-sm">Editar</a> |
+                            <a href="/users/delete/<?= $user->id ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
- <!-- Rodapé -->
- <footer class="footer">
+    <!-- Rodapé -->
+    <footer class="footer">
         <div class="container">
             <span class="text-muted">© 2024 AutoAdmin. Todos os direitos reservados.</span>
         </div>

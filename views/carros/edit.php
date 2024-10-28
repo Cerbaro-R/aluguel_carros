@@ -52,7 +52,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/config">
                         <i class="bi bi-gear-fill"></i> Configurações
                     </a>
                 </li>

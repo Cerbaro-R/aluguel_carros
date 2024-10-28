@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="pr-br">
-<head>
+<html lang="pt-br">
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Clientes</title>
+    <title>Aluguel de Carros</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css.css">
+    <link rel="stylesheet" href="public/css.css">
 </head>
 <body>
     <!--Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="logoIndex"><img src="../public/images/AutoAdminLogo.webp" alt="logo"></div>
+        <div class="logoIndex"><img src="public/images/AutoAdminLogo.webp" alt="logo"></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,58 +57,34 @@
                 </li>
             </ul>
         </div>
-    
-    <div class="content">
-        <h1 class="text-center">Cadastrar Novo Cliente</h1>
-        
-    <div class="card mb-4">     
-        <div id="cadastro" class="card-body">
 
-        <form action="/clientes/criar" method="POST">
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label for="nome" class="form-label">Nome:</label>
-                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome completo" required>
-            </div>
-
-            <div class="col-md-4">
-                <label for="cpf" class="form-label">CPF:</label>
-                <input type="text" id="cpf" name="cpf" class="form-control" placeholder="Digite o CPF" required>
-            </div>
-            </div>
-
-            <div class="row mb-3">
-            <div class="col-md-4">
-                <label for="telefone" class="form-label">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Digite o telefone" required>
-            </div>
-
-            <div class="col-md-4">
-                <label for="email" class="form-label">E-mail:</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Digite o e-mail" required>
-            </div>
+         <!-- Conteúdo Principal -->
+         <div class="content">
+            <h1>Configurações</h1>
+            <div class="row">
+                <!-- Card cadastrar usuários -->
+                <div class="col-md-4">
+                    <div id="box" class="card text-white bg-primary mb-3">
+                      <div class="card-header">Usuários</div>
+                      <div class="card-body">
+                        <h5 class="card-title">Gerenciar Usuários</h5>
+                        <a href="/config/users" class="btn btn-light rounded-pill">Acessar</a>
+                      </div>
+                    </div>
+                </div>
+                <!-- Card Gerenciar Status -->
+                <div class="col-md-4">
+                    <div id="box" class="card text-white bg-success mb-3">
+                      <div class="card-header">Status</div>
+                      <div class="card-body">
+                        <h5 class="card-title">Gerenciar Status</h5>
+                        <a href="/clientes" class="btn btn-light rounded-pill">Acessar</a>
+                      </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="row mb-3">
-            <div class="col-md-6">
-                <label for="endereco" class="form-label">Endereço:</label>
-                <textarea id="endereco" name="endereco" class="form-control" rows="2" placeholder="Digite o endereço completo" required></textarea>
-            </div>
-            </div>
 
-            <button type="submit" class="btn btn-primary">Cadastrar Cliente</button>
-        </form>
-    </div>
-    </div>
-    </div>
-    </div>
-
- <!-- Rodapé -->
- <footer class="footer">
-        <div class="container">
-            <span class="text-muted">© 2024 AutoAdmin. Todos os direitos reservados.</span>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS e dependências (Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
