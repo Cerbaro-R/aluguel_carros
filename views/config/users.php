@@ -61,7 +61,7 @@
         <!-- Conteúdo Principal -->
         <div class="container mt-4">
         <div class="content">
-        <h1 class="text-center">Cadastrar Novo Cliente</h1>
+        <h1 class="text-center">Cadastrar Novo Usuário</h1>
         
     <div class="card mb-4">     
         <div id="cadastro" class="card-body">
@@ -86,7 +86,7 @@
     </div>
     </div>
     </div>
-    </div>
+    
             <table class="table table-striped table-hover table-bordered table-info">
                 <thead class="table-dark">
                     <tr>
@@ -99,14 +99,17 @@
                     <tr>
                         <td><?= htmlspecialchars($user->nome) ?></td>
                         <td>
+                            <div class="d-flex justify-content-end">
                             <a href="/users/edit/<?= $user->id ?>" class="btn btn-warning btn-sm">Editar</a> |
                             <a href="/users/delete/<?= $user->id ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                            </div>
                         </td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
+    </div>
     </div>
 
     <!-- Rodapé -->
