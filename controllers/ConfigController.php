@@ -24,5 +24,29 @@ class ConfigController {
 
         header('Location: /config/users');
     }
+
+    public function editUser($id) {
+
+        $user = $this->model->getUserById($id);
+        include 'views/config/userEdit.php';
+    }
+
+    public function updateUser($id) {
+
+        $data = [
+            'nome' => $_POST['nome'],
+            'senha' => $_POST['senha']
+        ];
+        $this->model->updateUser($id, $data);
+
+        header('Location: /config/users');
+    }
+
+    public function deleteUser($id) {
+
+        print_r($id);
+        $this->model->deleteUser($id);       
+        header('Location: /config/users'); 
+    }
     
 }

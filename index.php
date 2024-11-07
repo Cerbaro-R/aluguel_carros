@@ -99,4 +99,17 @@ elseif ($uri === '/aluguel') {
     require 'controllers/ConfigController.php';
     $controller = new ConfigController();
     $controller->storeUser();
+}elseif (preg_match('/^\/config\/user\/edit\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/ConfigController.php';
+    $controller = new ConfigController();
+    $controller->editUser($matches[1]);
+}elseif (preg_match('/^\/config\/user\/update\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/ConfigController.php';
+    $controller = new ConfigController();
+    $controller->updateUser($matches[1]);
+    
+}elseif (preg_match('/^\/config\/user\/delete\/(\d+)$/', $uri, $matches)) {
+    require 'controllers/ConfigController.php';
+    $controller = new ConfigController();
+    $controller->deleteUser($matches[1]);
 }
