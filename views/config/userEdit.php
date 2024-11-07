@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Clientes</title>
+    <title>Adicionar Carros</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css.css">
+    <link rel="stylesheet" href="../../public/css.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
     <!--Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="logoIndex"><img src="public/images/AutoAdminLogo.webp" alt="logo"></div>
+        <div class="logoIndex"><img src="../../public/images/AutoAdminLogo.webp" alt="logo"></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,56 +59,26 @@
             </ul>
         </div>
 
-        <!-- Conteúdo Principal -->
-        <div class="container mt-4">
-        <div class="content">
-        <h1 class="text-center">Cadastrar Novo Usuário</h1>
-        
-    <div class="card mb-4">     
-        <div id="cadastro" class="card-body">
+    <div class="container mt-4">
+        <h1 class="mb-4">Editar Usuário</h1>
+        <div class="form-container">
+            <form action="/config/user/update/<?= $user->id ?>" method="post">
+                <div class="row mb-3">
+                    
+                    <div class="col-md-6">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" value="<?= htmlspecialchars($user->nome) ?>" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha" value="<?= htmlspecialchars($user->senha) ?>" required>
+                    </div>
+                </div>
 
-        <form action="/config/users/store" method="POST">
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="name" class="form-label">Nome:</label>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Digite o nome completo" required>
-        </div>
-    </div>
-    
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="password" class="form-label">Senha:</label>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Digite a senha" required>
-        </div>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Cadastrar Usuário</button>
-</form>
-    </div>
-    </div>
-    </div>
-    
-            <table class="table table-striped table-hover table-bordered table-info">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Nome</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php foreach($users as $user): ?>
-                    <tr>
-                        <td><?= htmlspecialchars($user->nome) ?></td>
-                        <td>
-                            <div class="d-flex justify-content-end">
-                            <a href="/config/user/edit/<?= $user->id ?>" class="btn btn-warning btn-sm">Editar</a> |
-                            <a href="/config/user/delete/<?= $user->id ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
-                            </div>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
-            </table>
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            </form>
         </div>
     </div>
     </div>
