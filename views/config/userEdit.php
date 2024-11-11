@@ -12,7 +12,7 @@
     <!--Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="logoIndex"><img src="../../public/images/AutoAdminLogo.webp" alt="logo"></div>
+        <div class="logoIndex"><img src="../public/images/AutoAdminLogo.webp" alt="logo"></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Alternar navegação">
           <span class="navbar-toggler-icon"></span>
         </button>

@@ -72,16 +72,6 @@
                       </div>
                     </div>
                 </div>
-                <!-- Card Gerenciar Status -->
-                <div class="col-md-4">
-                    <div id="box" class="card text-white bg-success mb-3">
-                      <div class="card-header">Status</div>
-                      <div class="card-body">
-                        <h5 class="card-title">Gerenciar Status</h5>
-                        <a href="/clientes" class="btn btn-light rounded-pill">Acessar</a>
-                      </div>
-                    </div>
-                </div>
             </div>
 
 
